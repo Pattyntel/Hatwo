@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">HaTWo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Configuración</string>
+
+
+    <string name="loading">Cargando</string>
+
+    <string name="err_msg_name">El campo nombre es obligatorio</string>
+    <string name="err_msg_email">Es obligatorio introducir un correo válido</string>
+    <string name="err_msg_password">El campo contraseña es obligatorio</string>
+    <string name="err_msg_phone">El campo teléfono es obligatorio</string>
+    <string name="err_msg_sex">El campo sexo es obligatorio</string>
+
+    <string name="hint_name">Nombre</string>
+    <string name="hint_email">Correo Electrónico</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_phone">Teléfono</string>
+    <string name="hint_sex">Sexo</string>
+
+    <string name="btn_sign_up">Acceder</string>
+    <string name="btn_register">Registrarse</string>
+
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_search">Buscar</string>
+
+    <string-array name="array_Services">
+        <item></item>
+    </string-array>
+
+    <string name="title_register">Registrar</string>
+    <string name="title_Servicios">Servicios</string>
+</resources>

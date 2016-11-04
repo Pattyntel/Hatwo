@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:navigationIcon="?attr/homeAsUpIndicator"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/img_avatar"
+            android:src="@drawable/avatar_36"/>
+
+        <ImageButton
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/camera_enhance_36"
+            android:id="@+id/btn_edit_avatar"
+            android:layout_alignTop="@+id/img_avatar"
+            android:layout_alignEnd="@+id/img_avatar"
+            android:layout_alignBottom="@+id/img_avatar"
+            android:layout_alignStart="@+id/img_avatar"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+        <!--android:background="?attr/selectableItemBackgroundBorderless"-->
+
+<!--           <com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/menu_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginTop="16dp"
+
+                fab:fab_addButtonColorNormal="?attr/colorPrimary"
+                fab:fab_addButtonSize="normal"
+                fab:fab_labelStyle="@style/Etiquetas"
+                fab:fab_labelsPosition="left"
+                android:layout_alignParentEnd="true">               -->
+        <!--app:fab_labelStyle="@style/Etiquetas"
+        android:layout_margin="@dimen/margenes_fab"-->
+
+<!--                    <com.getbase.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/accion_tomar_foto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        fab:fab_colorNormal="?attr/colorAccent"
+                        fab:fab_icon="@drawable/camera_36"
+                        fab:fab_size="mini"
+                        fab:fab_title="Tomar foto" />
+
+                    <com.getbase.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/accion_buscar_foto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        fab:fab_colorNormal="?attr/colorAccent"
+                        fab:fab_icon="@drawable/folder_image_36"
+                        fab:fab_size="mini"
+                        fab:fab_title="Elegir foto existente" />
+
+                </com.getbase.floatingactionbutton.FloatingActionsMenu>                 -->
+
+            </RelativeLayout>
+
+             <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="138dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="60dp"
+                android:id="@+id/datosUsuario"
+                android:theme="@style/EditText">
+
+
+                 <android.support.design.widget.TextInputLayout
+                     android:id="@+id/input_layout_name"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <EditText
+                         android:id="@+id/input_name"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:inputType="textPersonName"
+                         android:hint="@string/hint_name"/>
+                 </android.support.design.widget.TextInputLayout>
+
+                 <android.support.design.widget.TextInputLayout
+                     android:id="@+id/input_layout_email"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <EditText
+                         android:id="@+id/input_email"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:inputType="textEmailAddress"
+                         android:hint="@string/hint_email"/>
+                 </android.support.design.widget.TextInputLayout>
+
+                 <android.support.design.widget.TextInputLayout
+                     android:id="@+id/input_layout_password"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <EditText
+                         android:id="@+id/input_password"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:inputType="textPassword"
+                         android:hint="@string/hint_password" />
+                 </android.support.design.widget.TextInputLayout>
+
+                 <android.support.design.widget.TextInputLayout
+                     android:id="@+id/input_layout_phone"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <EditText
+                         android:id="@+id/input_phone"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:inputType="text|phone"
+                         android:hint="@string/hint_phone"/>
+                 </android.support.design.widget.TextInputLayout>
+
+                 <android.support.design.widget.TextInputLayout
+                     android:id="@+id/input_layout_sex"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                         android:id="@+id/input_sex"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="@string/hint_sex"
+                         android:textColorHint="#05ab9a"
+                         />
+        <!--app:met_floatingLabel="normal"-->
+                </android.support.design.widget.TextInputLayout>
+
+                 <Button android:id="@+id/btn_save_user"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/action_save"
+                     android:background="@color/colorPrimary"
+                     android:layout_marginTop="32dp"
+                     android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+</RelativeLayout>
+    </ScrollView>
+
+        </android.support.design.widget.CoordinatorLayout>
