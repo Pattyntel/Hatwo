@@ -330,8 +330,8 @@ public class FragmentGeneralClient extends Fragment
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.menu_tomar_foto:
-                        //tomarFoto();
-                        Toast.makeText(context, "Tomar foto con Camara!", Toast.LENGTH_SHORT).show();
+                        tomarFoto();
+                        //Toast.makeText(context, "Tomar foto con Camara!", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.menu_elegir_foto:
                         seleccionarImagen();
@@ -375,7 +375,7 @@ public class FragmentGeneralClient extends Fragment
       return true;
     }
 
-/*    private void tomarFoto()
+    private void tomarFoto()
     {
         File file = new File(Environment.getExternalStorageDirectory(),MEDIA_DIRECTORY);
         boolean isDirectoryCreated =file.exists();
@@ -397,7 +397,7 @@ public class FragmentGeneralClient extends Fragment
             startActivityForResult(intent, PHOTO_CODE);
         }
     }
-*/
+
     private void seleccionarImagen()
     {
         //ACTION_GET_CONTENT ->Constante que sirve para indicar que el usuario va a seleccionar un contenido.
@@ -493,7 +493,7 @@ public class FragmentGeneralClient extends Fragment
             }
         }
 
-/*        if(requestCode == PHOTO_CODE)
+       if(requestCode == PHOTO_CODE)
         {
             MediaScannerConnection.scanFile(context,
                     new String[]{mPath}, null,
@@ -506,7 +506,8 @@ public class FragmentGeneralClient extends Fragment
             });
             Bitmap bitmap = BitmapFactory.decodeFile(mPath);
             imgAvatar.setImageBitmap(bitmap);
-        }*/
+
+        }
     }
 
     private void mostrarMensaje(String mensaje)
