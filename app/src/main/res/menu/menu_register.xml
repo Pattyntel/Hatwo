@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/action_guardar"
-        android:icon="@drawable/check_36"
+        android:icon="@drawable/ic_done_white_36dp"
         android:title="@string/action_save"
         app:showAsAction="always" />
 </menu>

@@ -4,10 +4,25 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>-->
 
-    <color name="colorPrimary">#8DD5BC</color>
-    <color name="colorPrimaryDark">#2CB9A8</color>
+    <color name="colorPrimary">#2CB9A8</color>
+    <color name="colorPrimaryDark">#228B7D</color>
     <color name="colorAccent">#f7c200</color>
 
-    <color name="colorTeal">#228b7d</color>
+    <color name="actionbarTextColor">#ffffff</color>
+
+
+
+    <color name="Amarillo_Mostaza">#D9C258</color>
+    <color name="Gris_Claro">#DDE4E3</color>
+    <color name="Gris_Medio">#B3C1BF</color>
+
+    <color name="Azul_Gris">#637588</color>
+    <color name="Azul_Obscuro">#273440</color>
+    <color name="Gris_Obscuro">#333333</color>
+
+    <color name="Aqua">#8DD5BC</color>
+    <color name="Aqua2">#2CB9A8</color>
+    <color name="colorTeal">#228B7D</color>
     <color name="colorIndigo">#367588</color>
+
 </resources>

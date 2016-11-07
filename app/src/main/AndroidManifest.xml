@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".gui.ActivitySplash"
+            android:name=".Activities.ActivitySplash"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -18,38 +18,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".gui.ActivityLogin"/>
+        <activity android:name=".Activities.ActivityLogin"/>
 
 
-        <activity android:name=".gui.ActivityRegister"
+        <activity android:name=".Activities.ActivityRegister"
             android:label="@string/title_register"
-            android:parentActivityName=".gui.ActivityLogin">
+            android:parentActivityName=".Activities.ActivityLogin">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".gui.ActivityLogin"/>
+                android:value=".Activities.ActivityLogin"/>
         </activity>
 
-        <activity android:name=".gui.ActivityMain"/>
+        <activity android:name=".Activities.ActivityMain"/>
 
-        <activity android:name=".gui.ActivityListServices"
+        <activity android:name=".Activities.ActivityListServices"
             android:label="@string/title_Servicios"
-            android:parentActivityName=".gui.ActivityMain">
+            android:parentActivityName=".Activities.ActivityMain">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".gui.ActivityMain"/>
+                android:value=".Activities.ActivityMain"/>
         </activity>
 
     </application>
 
-    //Se agregan los permisos para la aplicacion estos son para aplicaciones menores a Android 6
-    //pero se deben de poner para mantener la compatibilidad.
-    //Permiso para Escribir archivos en la memoria
+    <!--Se agregan los permisos para la aplicacion estos son para aplicaciones menores a Android 6
+    pero se deben de poner para mantener la compatibilidad.
+    Permiso para Escribir archivos en la memoria-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    //Permiso para leer archivos de la memoria
+    <!--Permiso para leer archivos de la memoria-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    //Permiso para utilizar la camara
+    <!--Permiso para utilizar la camara-->
     <uses-permission android:name="android.permission.CAMERA"/>
-    //Permiso para poder hacer un scan y que detecte los nuevos archivos y que los muestre en la galeria.
+    <!--Permiso para poder hacer un scanner al dispositivo y que detecte los nuevos archivos y que los muestre en la galeria.-->
     <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED"/>
 </manifest>
 

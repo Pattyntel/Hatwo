@@ -10,8 +10,8 @@
     android:id="@+id/row_servicio">
 
     <ImageView
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="@dimen/avatar_size"
+        android:layout_height="@dimen/avatar_size"
         android:layout_marginLeft="4dp"
         android:id="@+id/imgv_row_servicio_img" />
 

@@ -34,4 +34,18 @@
 
     <string name="title_register">Registrar</string>
     <string name="title_Servicios">Servicios</string>
+
+    <string name="action_PedirServicio">Solicitar Servicio</string>
+    <string name="action_favorite">Marcar Favorito</string>
+
+    <string name="title_activity_provider_details">Proveedor</string>
+
+    <string name="girl_ipsum">
+        Morbi posuere lorem nec elit dapibus, vitae accumsan mauris pellentesque.
+        Vestibulum a lobortis mi. Vestibulum lacinia molestie semper. Pellentesque
+        ultrices arcu lacus, interdum mollis nibh convallis ut. Aliquam sagittis
+        sem a lacus gravida, eu accumsan purus volutpat. Donec tempus, est id
+        tristique consectetur, lacus ligula dignissim turpis, cursus commodo turpis
+        libero in purus. Phasellus tempus gravida tempor.
+    </string>
 </resources>
