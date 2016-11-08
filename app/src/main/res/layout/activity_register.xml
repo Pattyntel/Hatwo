@@ -9,6 +9,7 @@
     tools:context=".Activities.ActivityRegister"
     android:id="@+id/register_content">
 
+    <!-- App Bar -->
     <android.support.design.widget.AppBarLayout
         android:id="@+id/id_appbar"
         android:layout_width="match_parent"
@@ -16,27 +17,31 @@
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+        <!-- Toolbar -->
         <android.support.v7.widget.Toolbar
             android:id="@+id/tlb_register"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
             app:titleTextColor="@color/actionbarTextColor"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:navigationIcon="?attr/homeAsUpIndicator"/>
 
+        <!-- TabLayout -->
         <android.support.design.widget.TabLayout
             android:id="@+id/tab_layout_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
             app:tabMode="scrollable">
 
         </android.support.design.widget.TabLayout>
 
     </android.support.design.widget.AppBarLayout>
 
+    <!--Objeto Con Scroll -->
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager_client"
         android:layout_width="match_parent"
