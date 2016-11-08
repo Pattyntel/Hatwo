@@ -126,7 +126,7 @@ public class FragmentGeneralClient extends Fragment
         inputPhone = (EditText) layoutFragment.findViewById(R.id.input_phone);
         inputSex = (EditText) layoutFragment.findViewById(R.id.input_sex);
 
-        btnSaveUser = (Button) layoutFragment.findViewById(R.id.btn_save_user);
+//        btnSaveUser = (Button) layoutFragment.findViewById(R.id.btn_save_user);
         imgAvatar = (ImageView) layoutFragment.findViewById(R.id.img_avatar);
         btnEditAvatar = (ImageButton) layoutFragment.findViewById(R.id.btn_edit_avatar);
 
@@ -156,7 +156,7 @@ public class FragmentGeneralClient extends Fragment
         materialDesignSpinner_sex.setAdapter(arrayAdapter_sex);
 
 
-        btnSaveUser.setOnClickListener(new View.OnClickListener() {
+/*        btnSaveUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
@@ -167,7 +167,7 @@ public class FragmentGeneralClient extends Fragment
                     startActivity(intent);
                 };
             }
-        });
+        });*/
 
        btnEditAvatar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -183,7 +183,7 @@ public class FragmentGeneralClient extends Fragment
     /**
      * Validating form
      */
-    private void submitForm() {
+    public void submitForm() {
         if (!validateName()) {
             return;
         }
@@ -292,6 +292,7 @@ public class FragmentGeneralClient extends Fragment
         }
 
         public void afterTextChanged(Editable editable) {
+
             switch (view.getId()) {
                 case R.id.input_name:
                     validateName();
@@ -349,30 +350,48 @@ public class FragmentGeneralClient extends Fragment
 
     private boolean myRequestStoragePermission()
     {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if ((context.checkSelfPermission(WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) &&
+                    (context.checkSelfPermission(CAMERA) == PackageManager.PERMISSION_GRANTED)) {
+                Log.i("info","Permission is granted");
+                return true;
+            } else {
+
+                Log.i("info","Permission is revoked");
+               requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE, CAMERA}, MY_PERMISSIONS);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            Log.i("info","Permission is granted");
+            return true;
+        }
+
+
         //La version 6 es la que ocupa esta configuración de permisos
-        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.M)
-            return true;
-        if ((context.checkSelfPermission(WRITE_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED) &&
-                (context.checkSelfPermission(CAMERA)==PackageManager.PERMISSION_GRANTED))
-            return true;
-        if((shouldShowRequestPermissionRationale(WRITE_EXTERNAL_STORAGE)) ||
-                (shouldShowRequestPermissionRationale(CAMERA))){
-            Snackbar.make(layoutFragment.findViewById(android.R.id.content),"Son necesarios los permisos",
-                    Snackbar.LENGTH_INDEFINITE).setAction(android.R.string.ok, new View.OnClickListener(){
+/*        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if ((context.checkSelfPermission(WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) &&
+                    (context.checkSelfPermission(CAMERA) == PackageManager.PERMISSION_GRANTED))
+                return true;
+            if ((shouldShowRequestPermissionRationale(WRITE_EXTERNAL_STORAGE)) ||
+                    (shouldShowRequestPermissionRationale(CAMERA))) {
+                Snackbar.make(layoutFragment.findViewById(android.R.id.content), "Son necesarios los permisos",
+                        Snackbar.LENGTH_INDEFINITE).setAction(android.R.string.ok, new View.OnClickListener() {
 
-                @Override
-                public void onClick(View view) {
-                    //requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1);
-                    requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE, CAMERA}, MY_PERMISSIONS);
-                }
-            }).show();
-        }
-        else
-        {
-            requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE, CAMERA}, MY_PERMISSIONS);
+                    @Override
+                    public void onClick(View view) {
+                        //requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1);
+                        requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE, CAMERA}, MY_PERMISSIONS);
+                    }
+                }).show();
+            } else {
+                requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE, CAMERA}, MY_PERMISSIONS);
+                return false;
+            }
         }
 
-      return true;
+      return true;*/
     }
 
     private void tomarFoto()
@@ -524,7 +543,7 @@ public class FragmentGeneralClient extends Fragment
      * @param permissions
      * @param grantResults
      */
-/*    @Override
+    @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
@@ -566,6 +585,6 @@ public class FragmentGeneralClient extends Fragment
         });
 
         builder.show();
-    }           */
+    }
 
 }

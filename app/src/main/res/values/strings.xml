@@ -14,12 +14,42 @@
     <string name="err_msg_password">El campo contraseña es obligatorio</string>
     <string name="err_msg_phone">El campo teléfono es obligatorio</string>
     <string name="err_msg_sex">El campo sexo es obligatorio</string>
+    <string name="err_msg_street">El campo calle es obligatorio</string>
+    <string name="err_msg_num">El campo número es obligatorio</string>
+    <string name="err_msg_unit">El campo colonia es obligatorio</string>
+    <string name="err_msg_country">El campo país es obligatorio</string>
+    <string name="err_msg_state">El campo estado es obligatorio</string>
+    <string name="err_msg_city">El campo ciudad es obligatorio</string>
+    <string name="err_msg_zip_code">El campo código postal es obligatorio</string>
+    <string name="err_msg_card_number">El campo de número de tarjeta es obligatorio</string>
+    <string name="err_msg_month_card">El campo de mes de vencimiento es obligatorio</string>
+    <string name="err_msg_year_card">El campo de año de vencimiento es obligatorio</string>
+    <string name="err_msg_security_code">El campo de código de seguridad es obligatorio</string>
+    <string name="err_msg_first_name">El campo de nombre(s) es obligatorio</string>
+    <string name="err_msg_last_name">El campo de apellido(s) es obligatorio</string>
+
 
     <string name="hint_name">Nombre</string>
     <string name="hint_email">Correo Electrónico</string>
     <string name="hint_password">Contraseña</string>
     <string name="hint_phone">Teléfono</string>
     <string name="hint_sex">Sexo</string>
+    <string name="hint_street">Calle</string>
+    <string name="hint_num">Número</string>
+    <string name="hint_colonia">Colonia, Unidad, etc.</string>
+    <string name="hint_country">País</string>
+    <string name="hint_state">Estado / Provincia / Localidad </string>
+    <string name="hint_city">Ciudad</string>
+    <string name="hint_zip_code">Código Postal</string>
+    <string name="hint_card_number">Número de Tarjeta</string>
+    <string name="hint_month">MM</string>
+    <string name="hint_year">YY</string>
+    <string name="hint_security_code">Código de Seguridad</string>
+    <string name="hint_first_name">Nombre(s)</string>
+    <string name="hint_last_name">Apellido(s)</string>
+
+
+
 
     <string name="btn_sign_up">Acceder</string>
     <string name="btn_register">Registrarse</string>

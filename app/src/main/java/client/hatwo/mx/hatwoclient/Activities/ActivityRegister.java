@@ -4,6 +4,7 @@ package client.hatwo.mx.hatwoclient.Activities;
  * Created by Pattyntel on 01/11/2016.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -12,6 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import java.util.HashMap;
 
@@ -29,6 +33,7 @@ public class ActivityRegister extends AppCompatActivity
     ViewPager viewPagerClient;
 
     ViewPagerAdapterClient vpac;
+    MenuInflater inflater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +61,9 @@ public class ActivityRegister extends AppCompatActivity
         tabLayout.setupWithViewPager(viewPagerClient);
 
         //Los iconos de la tab se agregan por codigo no por diseño
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_build_white_18dp);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_perm_identity_white_18dp);
-     //   tabLayout.getTabAt(2).setIcon(R.drawable.ic_build_white_18dp);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_perm_identity_white_18dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_home_white_18dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_credit_card_white_18dp);
 
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
@@ -111,6 +116,54 @@ public class ActivityRegister extends AppCompatActivity
         Snackbar.make(findViewById(android.R.id.content), mensaje, length)
                 .show();
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        //getMenuInflater().inflate(R.menu.main, menu);
+        //return true;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_register, menu);
+        //     MenuItem item = menu.findItem(R.id.action_save);
+        /*     SearchView searchView = (SearchView)item.getActionView();
+
+         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+
+             @Override
+             public boolean onQueryTextSubmit(String query) {
+                 return false;
+             }
+
+             @Override
+             public boolean onQueryTextChange(String newText) {
+   //              adapter.getFilter().filter(newText);
+
+                 return false;
+             }
+         });*/
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_guardar:
+                Log.i("ActionBar", "Nuevo!");
+                //FragmentGeneralClient.submitForm();
+                //Validar todos los campos
+                    Intent intent = new Intent(this, ActivityMain.class);
+                    startActivity(intent);
+                return true;
+
+            case R.id.action_settings:
+                Log.i("ActionBar", "Settings!");;
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+
 
 }
 

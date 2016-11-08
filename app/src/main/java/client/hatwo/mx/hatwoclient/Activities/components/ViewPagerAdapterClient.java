@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import client.hatwo.mx.hatwoclient.Activities.FragmentAddressClient;
 import client.hatwo.mx.hatwoclient.Activities.FragmentGeneralClient;
+import client.hatwo.mx.hatwoclient.Activities.FragmentWayPayClient;
 //import client.hatwo.mx.hatwoclient.Activities.FragmentWayPayClient;
 
 /**
@@ -16,7 +17,7 @@ public class ViewPagerAdapterClient extends FragmentPagerAdapter {
 
     FragmentGeneralClient fragmentGeneralClient;
     FragmentAddressClient fragmentAddressClient;
-//    FragmentWayPayClient fragmentWayPayClient;
+    FragmentWayPayClient fragmentWayPayClient;
 
     public ViewPagerAdapterClient(FragmentManager fragmentManager)
     {
@@ -29,7 +30,7 @@ public class ViewPagerAdapterClient extends FragmentPagerAdapter {
     {
         fragmentGeneralClient = new FragmentGeneralClient();
         fragmentAddressClient = new FragmentAddressClient();
-  //      fragmentWayPayClient = new FragmentWayPayClient();
+        fragmentWayPayClient = new FragmentWayPayClient();
     }
 
 
@@ -43,11 +44,11 @@ public class ViewPagerAdapterClient extends FragmentPagerAdapter {
         return fragmentAddressClient;
     }
 
- /*   public FragmentWayPayClient getFragmentWayPayClient()
+   public FragmentWayPayClient getFragmentWayPayClient()
     {
         return fragmentWayPayClient;
     }
-*/
+
     /**
      * Return the Fragment associated with a specified position.
      *
@@ -60,7 +61,7 @@ public class ViewPagerAdapterClient extends FragmentPagerAdapter {
         {
             case 0 : return fragmentGeneralClient;
             case 1 : return fragmentAddressClient;
-          //  case 2 : return fragmentWayPayClient;
+            case 2 : return fragmentWayPayClient;
             default : return null;
         }
     }
@@ -71,7 +72,7 @@ public class ViewPagerAdapterClient extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         //Regresamos 3, porque ahorita solo tenemos 3 tabs:
-        return 2;
+        return 3;
     }
 
     @Override

@@ -158,13 +158,13 @@
                     <!--app:met_floatingLabel="normal"-->
                 </android.support.design.widget.TextInputLayout>
 
-                <Button android:id="@+id/btn_save_user"
+            <!--    <Button android:id="@+id/btn_save_user"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/action_save"
                     android:background="@color/colorPrimary"
                     android:layout_marginTop="32dp"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white"/>-->
 
             </LinearLayout>
 
