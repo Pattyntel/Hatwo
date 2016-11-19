@@ -4,8 +4,23 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+
+    <string name="title_register">Registrar</string>
+    <string name="title_Servicios">Servicios</string>
+    <string name="title_Customer">Perfil</string>
+    <string name="title_Proveedores">Proveedores Cercanos</string>
+    <string name="title_activity_provider_details">Proveedor</string>
+
+
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_PedirServicio">Solicitar Servicio</string>
+    <string name="action_favorite">Marcar Favorito</string>
     <string name="action_settings">Configuración</string>
 
+    <string name="btn_sign_up">Acceder</string>
+    <string name="btn_register">Registrarse</string>
 
     <string name="loading">Cargando</string>
 
@@ -51,24 +66,11 @@
 
 
 
-    <string name="btn_sign_up">Acceder</string>
-    <string name="btn_register">Registrarse</string>
 
-    <string name="action_cancel">Cancelar</string>
-    <string name="action_save">Guardar</string>
-    <string name="action_search">Buscar</string>
 
-    <string-array name="array_Services">
-        <item></item>
-    </string-array>
 
-    <string name="title_register">Registrar</string>
-    <string name="title_Servicios">Servicios</string>
 
-    <string name="action_PedirServicio">Solicitar Servicio</string>
-    <string name="action_favorite">Marcar Favorito</string>
 
-    <string name="title_activity_provider_details">Proveedor</string>
 
     <string name="girl_ipsum">
         Morbi posuere lorem nec elit dapibus, vitae accumsan mauris pellentesque.

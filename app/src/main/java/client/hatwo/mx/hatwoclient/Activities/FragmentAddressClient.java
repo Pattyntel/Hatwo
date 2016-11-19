@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +40,10 @@ public class FragmentAddressClient extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        getActivity().setTitle("Dirección");
+        Log.i("Titulo","Dirección");
+
         //Cargamos el xml correspondiente al fragmento necesario para hacer movimientos de alumnos.
         //container es donde se va a desplegar.
         //observador cuando se va a utilizar en otras aplicaciones o para debugin
@@ -69,8 +74,11 @@ public class FragmentAddressClient extends Fragment {
         inputCity.addTextChangedListener(new MyTextWatcher(inputCity));
         inputZipCode.addTextChangedListener(new MyTextWatcher(inputZipCode));
 
-        controladorClient = new ControladorClient(getContext());
 
+
+        controladorClient = new ControladorClient(getContext());
+        getActivity().setTitle("Dirección");
+        Log.i("Titulo","Dirección2");
         return layoutFragment;
     }
 

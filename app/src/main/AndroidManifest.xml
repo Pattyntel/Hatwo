@@ -22,14 +22,17 @@
 
 
         <activity android:name=".Activities.ActivityRegister"
-            android:label="@string/title_register"
+
             android:parentActivityName=".Activities.ActivityLogin">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.ActivityLogin"/>
         </activity>
 
-        <activity android:name=".Activities.ActivityMain"/>
+        <activity android:name=".Activities.ActivityListProvidersNear"/>
+
+        <activity android:name=".Activities.ActivityCustomer"/>
+
 
         <activity android:name=".Activities.ActivityListServices"
             android:label="@string/title_Servicios"
@@ -37,6 +40,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.ActivityMain"/>
+        </activity>
+
+        <activity android:name=".Activities.ActivityMain"
+            android:label="@string/title_Proveedores"
+            android:parentActivityName=".Activities.ActivityListServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.ActivityListServices"/>
         </activity>
 
     </application>

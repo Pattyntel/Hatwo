@@ -11,6 +11,7 @@ public class Cliente {
     private String password;
     private String telefono;
     private String sexo;
+    private String fotografia;
 
 
     public Cliente()
@@ -18,7 +19,7 @@ public class Cliente {
 
     }
 
-    public Cliente(int id, String nombre, String email, String password, String telefono, String sexo)
+    public Cliente(int id, String nombre, String email, String password, String telefono, String sexo, String fotografia)
     {
         this.id = id;
         this.nombre = nombre;
@@ -26,6 +27,7 @@ public class Cliente {
         this.password = password;
         this.telefono = telefono;
         this.sexo = sexo;
+        this.fotografia = fotografia;
     }
 
     //Getters y Setters:
@@ -72,4 +74,9 @@ public class Cliente {
     public String getSexo() { return sexo; }
 
     public void setSexo(String sexo) { this.sexo = sexo; }
+
+    public String getFotografia() { return fotografia; }
+
+    public void setFotografia(String fotografia) { this.fotografia = fotografia; }
+
 }

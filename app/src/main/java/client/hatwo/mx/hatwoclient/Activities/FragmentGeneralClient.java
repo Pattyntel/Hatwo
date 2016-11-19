@@ -1,7 +1,6 @@
 package client.hatwo.mx.hatwoclient.Activities;
 
-//import android.app.Fragment;
-import android.Manifest;
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,14 +15,14 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
+
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.ActivityCompat;
+
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentContainer;
+
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.LinearLayoutManager;
+
 import android.support.v7.widget.PopupMenu;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -33,7 +32,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
+
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,7 +47,6 @@ import java.io.InputStream;
 
 import client.hatwo.mx.hatwoclient.R;
 import client.hatwo.mx.hatwoclient.core.ControladorClient;
-import client.hatwo.mx.hatwoclient.model.Cliente;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -108,6 +106,9 @@ public class FragmentGeneralClient extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        getActivity().setTitle("General");
+        Log.i("Titulo","General");
+
         //Cargamos el xml correspondiente al fragmento necesario para hacer movimientos de alumnos.
         //container es donde se va a desplegar.
         //observador cuando se va a utilizar en otras aplicaciones o para debugin
@@ -135,6 +136,7 @@ public class FragmentGeneralClient extends Fragment
         inputPassword.addTextChangedListener(new MyTextWatcher(inputPassword));
         inputPhone.addTextChangedListener(new MyTextWatcher(inputPhone));
         inputSex.addTextChangedListener(new MyTextWatcher(inputSex));
+
 
         try
         {

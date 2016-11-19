@@ -5,6 +5,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,10 @@ public class FragmentWayPayClient extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        getActivity().setTitle("Forma de Pago");
+        Log.i("Titulo","Pago");
+
         //Cargamos el xml correspondiente al fragmento necesario para hacer movimientos de alumnos.
         //container es donde se va a desplegar.
         //observador cuando se va a utilizar en otras aplicaciones o para debugin
@@ -61,6 +66,8 @@ public class FragmentWayPayClient extends Fragment {
         inputSecurityCode.addTextChangedListener(new MyTextWatcher(inputSecurityCode));
         inputFirstName.addTextChangedListener(new MyTextWatcher(inputFirstName));
         inputLastName.addTextChangedListener(new MyTextWatcher(inputLastName));
+
+
 
         controladorClient = new ControladorClient(getContext());
 

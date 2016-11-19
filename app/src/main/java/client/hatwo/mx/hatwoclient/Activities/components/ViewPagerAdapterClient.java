@@ -3,11 +3,11 @@ package client.hatwo.mx.hatwoclient.Activities.components;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
 import client.hatwo.mx.hatwoclient.Activities.FragmentAddressClient;
 import client.hatwo.mx.hatwoclient.Activities.FragmentGeneralClient;
 import client.hatwo.mx.hatwoclient.Activities.FragmentWayPayClient;
-//import client.hatwo.mx.hatwoclient.Activities.FragmentWayPayClient;
 
 /**
  * Created by Pattyntel on 06/11/2016.
@@ -79,13 +79,16 @@ public class ViewPagerAdapterClient extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         //Si se quiere asignar un titulo al tab, dependiendo de la posición.
         // Regresamos null para desplegar únicamente el ícono.
-    /*    switch (position)
+/*      switch (position)
         {
-            case 0 : "Datos Generales";
+            case 0 : getActivity().setTitle("Datos Generales");
+                Log.i("Titulo","General");
+                break;
             case 1 : "Dirección";
             case 2 : "Forma de Pago";
             default : return null;
         }   */
+        Log.i("Titulos","Todos");
         return null;
 
     }
