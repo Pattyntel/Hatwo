@@ -19,7 +19,9 @@ import client.hatwo.mx.hatwoclient.model.Servicio;
  * Created by Pattyntel on 22/11/2016.
  */
 public class AdapterService2 extends RecyclerView.Adapter<RecyclerView.ViewHolder>
+
 {
+
     Context context; //Necesitaremos el context para ubicar diferentes recursos de la Applicación.
     List<Servicio> servicios; //La lista que contiene los datos a desplegar.
 
