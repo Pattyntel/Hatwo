@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_impar_provider"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/Gris_Claro">
+
+    <!-- Image circular de la librería externa -->
+    <!--    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgv_row_impar_photo_provider"
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size"
+            android:layout_marginRight="16dp" />-->
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="4dp"
+        android:id="@+id/imgv_row_impar_photo_provider" />
+    <!--    <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="64dp"
+           android:paddingLeft="16dp"
+           android:orientation="hotal"> -->
+
+          <LinearLayout
+               android:layout_width="254dp"
+               android:layout_height="64dp"
+               android:paddingLeft="16dp"
+               android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:paddingLeft="16dp"
+                android:textSize="4dp"
+                android:text="Código"
+                android:id="@+id/lbl_row_impar_provider_id"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="24dp"
+                android:text="Nombre"
+                android:id="@+id/lbl_row_impar_provider_nombre"/>
+
+<!--        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:paddingLeft="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textAlignment="textEnd"
+                android:textSize="24dp"
+                android:text="Nombre"
+                android:id="@+id/lbl_row_impar_tiempo_llegada_provider"/>
+
+            <RatingBar
+                android:layout_width="4dp"
+                android:layout_height="128dp"
+                android:id="@+id/rat_row_impar_calif_provider"/>
+        </LinearLayout> -->
+    </LinearLayout>
+</LinearLayout>

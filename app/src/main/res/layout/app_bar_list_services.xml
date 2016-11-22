@@ -2,26 +2,40 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".Activities.ActivityListServices">
 
+    <!-- App Bar -->
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:fitsSystemWindows="true">
 
+        <!-- Toolbar -->
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/tlb_service"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             app:navigationIcon="?attr/homeAsUpIndicator"/>
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_list_services" />
+      <include layout="@layout/content_list_services" />
+    <!-- Objeto Con Scroll
+    <android.support.v7.widget.RecyclerView
+         android:id="@+id/rclv_servicios"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/coordinator"
+         android:padding="3dp"
+         android:scrollbars="vertical"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
 
 </android.support.design.widget.CoordinatorLayout>

@@ -61,9 +61,9 @@ public class ServiceLogin extends AsyncTask<String, String, Integer> {
     protected Integer doInBackground(String... params)
     {
 
-      Integer error = CodigosErrorGenerales.getCodeDefault();
+    Integer error = CodigosErrorGenerales.getCodeDefault();
         //para hacer la llamada Post
-        HttpPost post;
+      /*  HttpPost post;
         post = new HttpPost(params[0]);
 
         post.setHeader("content-type", "application/json");
@@ -137,7 +137,7 @@ public class ServiceLogin extends AsyncTask<String, String, Integer> {
             Log.d(e.getMessage(), "Entre a IOException");
 
             return CodigosErrorGenerales.getCodeExcepcionInternet();
-        }
+        }*/
 
         return error;
     }

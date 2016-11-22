@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -28,6 +29,7 @@ public class ActivityListProvidersNear extends AppCompatActivity {
     ControladorProvider controladorProvider;
 
     RecyclerView.LayoutManager myLayoutManager;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +48,11 @@ public class ActivityListProvidersNear extends AppCompatActivity {
         controladorProvider = new ControladorProvider();
         adapterProvider = new AdapterProvider(controladorProvider.getProveedores());
         rclvProviders.setAdapter(adapterProvider);
+
+        //Añadir un toolbar
+        toolbar = (Toolbar) findViewById(R.id.tlb_provider);
+        setSupportActionBar(toolbar);
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

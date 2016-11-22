@@ -2,6 +2,7 @@ package client.hatwo.mx.hatwoclient.Activities;
 
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,86 +10,83 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 
+import client.hatwo.mx.hatwoclient.Activities.components.AdapterService2;
 import client.hatwo.mx.hatwoclient.R;
 import client.hatwo.mx.hatwoclient.core.ControladorService;
-import client.hatwo.mx.hatwoclient.Activities.components.AdapterService;
 
 /**
- * Created by Pattyntel on 02/11/2016.
+ * Created by Pattyntel on 22/11/2016.
  */
-public class ActivityListServices extends AppCompatActivity
-{
-    RecyclerView rclvServicios;
+public class ActivityListServices2 extends AppCompatActivity {
+
+
+    private RecyclerView rclvServices;
     private LinearLayoutManager lManager;
     private CollapsingToolbarLayout collapser;
 
-    ControladorService controladorServicio;
-    AdapterService adapterServicio;
+    AdapterService2 adapterService;
+    ControladorService controladorService;
 
     RecyclerView.LayoutManager myLayoutManager;
     Toolbar toolbar;
 
-    private MenuItem mSearchAction;
-    private boolean isSearchOpened = false;
-    private EditText editSearch;
-
-//    ArrayAdapter<String> adapter;
-
-
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_services);
-
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        setContentView(R.layout.activity_list_services2);
         inicializarComponentes();
     }
 
-    private void inicializarComponentes()
-    {
-        // Obtener el Recycler
-        rclvServicios = (RecyclerView) findViewById(R.id.rclv_servicios);
+    private void inicializarComponentes() {
 
-        // Usar un administrador para LinearLayout
+        rclvServices = (RecyclerView) findViewById(R.id.rclv_services);
+
         myLayoutManager = new LinearLayoutManager(this);
-        rclvServicios.setLayoutManager(myLayoutManager);
+        rclvServices.setLayoutManager(myLayoutManager);
 
-        // Crear un nuevo adaptador
-        controladorServicio = new ControladorService();
-        adapterServicio = new AdapterService(controladorServicio.getServicios());
-        rclvServicios.setAdapter(adapterServicio);
+        controladorService = new ControladorService();
+        adapterService = new AdapterService2(controladorService.getServicios());
+        rclvServices.setAdapter(adapterService);
 
         //Añadir un toolbar
         toolbar = (Toolbar) findViewById(R.id.tlb_service);
         setSupportActionBar(toolbar);
+    }
 
-     //  adapter = a
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.action_search:
+                showSnackBar("Comenzar a buscar...");
+                return true;
+            case R.id.action_settings:
+                showSnackBar("Se abren los ajustes");
+                return true;
+        }
 
-   /*     btnBuscarServicio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buscarService();
-            }
-        });*/
+        return super.onOptionsItemSelected(item);
     }
 
     /**
-     * Este método lo invicamos cuando el usuario pulsa el botón "Buscar"
+     * Proyecta una {@link Snackbar} con el string usado
+     *
+     * @param msg Mensaje
      */
-    private void buscarService()
-    {
-    //    String mat = txtServicio.getText().toString();
-       // Intent intent = new Intent(this, ActivityDatosService.class);
-       // intent.putExtra("matricula", mat);
-        // startActivity(intent);
+    private void showSnackBar(String msg) {
+        Snackbar
+                .make(findViewById(R.id.coordinator), msg, Snackbar.LENGTH_LONG)
+                .show();
     }
 
+
+/*    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -97,7 +95,7 @@ public class ActivityListServices extends AppCompatActivity
         //return true;
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_search, menu);
-  //      MenuItem item = menu.findItem(R.id.action_search);
+        //      MenuItem item = menu.findItem(R.id.action_search);
    /*     SearchView searchView = (SearchView)item.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
@@ -116,10 +114,4 @@ public class ActivityListServices extends AppCompatActivity
         });*/
         return super.onCreateOptionsMenu(menu);
     }
-
-
-
-
-
 }
-

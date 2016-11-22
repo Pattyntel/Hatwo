@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activities.ActivitySplash"
+            android:name=".Activities.ActivityListServices2"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -34,7 +34,7 @@
         <activity android:name=".Activities.ActivityCustomer"/>
 
 
-        <activity android:name=".Activities.ActivityListServices"
+        <activity android:name=".Activities.ActivitySplash"
             android:label="@string/title_Servicios"
             android:parentActivityName=".Activities.ActivityMain">
             <meta-data
