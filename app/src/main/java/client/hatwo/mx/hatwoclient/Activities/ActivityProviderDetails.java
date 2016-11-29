@@ -8,6 +8,7 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,20 +23,23 @@ import client.hatwo.mx.hatwoclient.R;
 public class ActivityProviderDetails extends AppCompatActivity {
 
 
-    private static final String EXTRA_NAME = "com.herprogramacion.toolbarapp.name";
-    private static final String EXTRA_DRAWABLE = "com.herprogramacion.toolbarapp.drawable";
+ //   private static final String EXTRA_NAME = "com.herprogramacion.toolbarapp.name";
+ //   private static final String EXTRA_DRAWABLE = "com.herprogramacion.toolbarapp.drawable";
 
     /**
      * Inicia una nueva instancia de la actividad
      *
      * @param activity Contexto desde donde se lanzará
-     * @param title    Item a procesar
+     //* @param title    Item a procesar
      */
-/*    public static void createInstance(Activity activity, Girl title) {
-        Intent intent = getLaunchIntent(activity, title);
+    public static void createInstance(Activity activity, Integer id) {
+
+        Integer idServicio = id;
+        Intent intent = new Intent(activity, ActivityProviderDetails.class);
+        intent.putExtra("id", id);
         activity.startActivity(intent);
     }
-*/
+
     /**
      * Construye un Intent a partir del contexto y la actividad
      * de detalle.
@@ -61,14 +65,16 @@ public class ActivityProviderDetails extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent i = getIntent();
-        String name = i.getStringExtra(EXTRA_NAME);
-        int idDrawable = i.getIntExtra(EXTRA_DRAWABLE, -1);
+        String name = i.getStringExtra("Nombre proveedor");
+     //   int idDrawable = i.getIntExtra(EXTRA_DRAWABLE, -1);
+//        String name = i.getStringExtra(EXTRA_NAME);
+//        int idDrawable = i.getIntExtra(EXTRA_DRAWABLE, -1);
 
         CollapsingToolbarLayout collapser =
                 (CollapsingToolbarLayout) findViewById(R.id.collapser);
         collapser.setTitle(name); // Cambiar título
 
-        loadImageParallax(idDrawable);// Cargar Imagen
+ //       loadImageParallax(idDrawable);// Cargar Imagen
 
         // Setear escucha al FAB
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
